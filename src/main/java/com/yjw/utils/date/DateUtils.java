@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * 时间工具类:001001
+ *0001:时间工具类
  *@author Orange
  *@date 下午9:05:40,2016年2月29日
  *@vesion V1.0
@@ -33,7 +33,7 @@ public class DateUtils {
 	public static final String dateFormatYM = "yyyy-MM";
 	
 	/**
-	 * Date类型转换成String类型
+	 * 00010001:Date类型转换成String类型
 	 * @param date
 	 * @param dateFormate
 	 * @return
@@ -51,9 +51,11 @@ public class DateUtils {
 	}
 	
 	public static void main(String[] args) {
+		
+		//测试00010001
 		Date date = new Date();
 		String dateString = getStringByFormat(date, dateFormatYMDHMS);
-		System.out.println(dateString);
+		System.out.println("00010001:"+dateString);
 	}
 	
 }
