@@ -1,5 +1,6 @@
 package com.yjw.utils.date;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -41,21 +42,43 @@ public class DateUtils {
 	public static String getStringByFormat(Date date,String dateFormat){
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
 		String dateStr = null;
+		dateStr = simpleDateFormat.format(date);
+		return dateStr;
+	}
+	
+	/**
+	 * 00010002:String类型转换成Date类型
+	 * @param dateString
+	 * @param dateFormat
+	 * @return
+	 */
+	public static Date getDateByFormat(String dateString,String dateFormat){
+		Date parseDate = null;
+		SimpleDateFormat simpleDateFormat = new SimpleDateFormat(dateFormat);
 		try {
-			dateStr = simpleDateFormat.format(date);
-		} catch (Exception e) {
+			parseDate = simpleDateFormat.parse(dateString);
+		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return dateStr;
+		return parseDate;
 	}
 	
 	public static void main(String[] args) {
 		
-		//测试00010001
-		Date date = new Date();
-		String dateString = getStringByFormat(date, dateFormatYMDHMS);
-		System.out.println("00010001:"+dateString);
+		//测试00010001:Date类型转换成String类型
+		Date date0001 = new Date();
+		String dateString0001 = getStringByFormat(date0001, dateFormatYMDHMS);
+		System.out.println("00010001:"+dateString0001);
+		
+		//测试00010002:String类型转换成Date类型
+		String dateString0002 = "2016-03-02 14:12:12";
+		Date date0002 = getDateByFormat(dateString0002, dateFormatYMDHMS);
+		System.out.println("00010002:"+date0002);
+//		System.out.println( getStringByFormat(date0002, dateFormatYMD));
+		
+		
+		
 	}
 	
 }
