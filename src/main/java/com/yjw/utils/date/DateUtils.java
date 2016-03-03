@@ -64,21 +64,4 @@ public class DateUtils {
 		return parseDate;
 	}
 	
-	public static void main(String[] args) {
-		
-		//测试00010001:Date类型转换成String类型
-		Date date0001 = new Date();
-		String dateString0001 = getStringByFormat(date0001, dateFormatYMDHMS);
-		System.out.println("00010001:"+dateString0001);
-		
-		//测试00010002:String类型转换成Date类型
-		String dateString0002 = "2016-03-02 14:12:12";
-		Date date0002 = getDateByFormat(dateString0002, dateFormatYMDHMS);
-		System.out.println("00010002:"+date0002);
-//		System.out.println( getStringByFormat(date0002, dateFormatYMD));
-		
-		
-		
-	}
-	
 }
