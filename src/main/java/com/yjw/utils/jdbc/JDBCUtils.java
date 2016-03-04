@@ -8,11 +8,11 @@ import java.sql.Statement;
 
 
 /**
- *0003:jdbc工具类
- *@author Orange
- *@date 下午7:03:14,2016年3月3日
- *@vesion V1.0
- *@see yjwsmileatlife@126.com
+ * 0003:jdbc工具类
+ * @author Orange
+ * @date 下午7:03:14,2016年3月3日
+ * @vesion V1.0
+ * @see yjwsmileatlife@126.com
  */
 public class JDBCUtils {
 	

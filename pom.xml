@@ -16,6 +16,7 @@
     <commons-lang3-version>3.3.2</commons-lang3-version>
     <json-lib-version>2.4</json-lib-version>
     <mysql-connector-java-version>5.1.38</mysql-connector-java-version>
+    <google-xmemcached-version>3.5.0</google-xmemcached-version>
   </properties>
 
   <dependencies>
@@ -47,6 +48,14 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>${mysql-connector-java-version}</version>
 	</dependency>
+	
+	<!-- Enables memcached caching in Spring beans via annotations -->
+	<dependency>
+     <groupId>com.google.code.simple-spring-memcached</groupId>
+     <artifactId>xmemcached-provider</artifactId>
+     <version>${google-xmemcached-version}</version>
+   </dependency> 
+   
 	
   </dependencies>
   
