@@ -9,7 +9,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 /**
- *文件流处理
+ *0005:文件流处理类
  *@author Higher
  *@date 下午1:54:17,2016年6月29日
  *@vesion 1.0
@@ -19,7 +19,7 @@ import java.io.IOException;
 public class FileUtils {
 	
 	/**
-	 * 往文件写入内容
+	 * 00050001:往文件写入内容
 	 * @param path
 	 * @param writeMsg
 	 * @return
@@ -53,7 +53,7 @@ public class FileUtils {
 	}
 	
 	/**
-	 * 往文件写入内容（拓展）
+	 * 00050002:往文件写入内容（拼接内容）
 	 * @param path
 	 * @param writeMsg
 	 * @return
@@ -102,7 +102,7 @@ public class FileUtils {
 	}
 	
 	/**
-	 * 读取文件内容
+	 * 00050003:读取文件内容
 	 * @param path
 	 * @return
 	 */
