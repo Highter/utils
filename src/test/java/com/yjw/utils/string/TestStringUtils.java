@@ -7,7 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
- *0002:字符串工具类StringUtils的测试类
+ *0002:字符串工具类的测试类
  *@author Orange
  *@date 下午8:16:58,2016年3月3日
  *@vesion V1.0
@@ -27,12 +27,12 @@ public class TestStringUtils {
 	
 	@Before
 	public void before(){
-		System.out.println("@Before");
+		System.out.println("@Before:StringUtils");
 	}
 	
 	@After
 	public void after(){
-		System.out.println("@After");
+		System.out.println("@After:StringUtils");
 	}
 	
 	/**
