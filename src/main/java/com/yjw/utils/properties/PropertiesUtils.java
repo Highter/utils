@@ -7,7 +7,7 @@ import java.util.Properties;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 
 /**
- * 0006:配置文件工具类
+ * 0006:properties配置文件工具类
  * @author Administrator
  * @date 下午3:49:55,2016年7月11日
  * @vesion 1.0
@@ -18,7 +18,7 @@ public class PropertiesUtils {
 
 	
 	/**
-	 * 0006001：获取文件的 Properties 对象
+	 * 0006001：获取文件的 Properties 对象（一）
 	 * @param fileName
 	 * @return 
 	 */
@@ -34,7 +34,25 @@ public class PropertiesUtils {
 	}
 	
 	/**
-	 * 0006002：根据 文件名、key 获取value值
+	 * 0006002：获取文件的 Properties 对象（二）
+	 * @param url
+	 * @return
+	 */
+	public static Properties loadProperties(String url){
+		Properties properties = null;
+		try {
+			properties = new Properties();
+			InputStream in = Thread.currentThread().getContextClassLoader()
+					.getResourceAsStream(url);
+			properties.load(in);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return properties;
+	}
+	
+	/**
+	 * 0006003：根据 文件名、key 获取value值
 	 * @param name
 	 * @param fileName
 	 * @return
@@ -51,32 +69,4 @@ public class PropertiesUtils {
 		}
 		return result;
 	}
-	
-	/**
-	 * 0006003：获取文件的 Properties 对象
-	 * @param url
-	 * @return
-	 */
-	public static Properties loadProperties(String url){
-		Properties properties = null;
-		try {
-			properties = new Properties();
-			InputStream in = Thread.currentThread().getContextClassLoader()
-					.getResourceAsStream(url);
-			properties.load(in);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return properties;
-	}
-
-	public static void main(String[] args) {
-		Properties pro = loadProperties("test.properties");
-		
-		//key值
-		String key = "testUrl";
-		String testUrl = pro.getProperty(key);
-		System.out.println(key+"---"+testUrl);
-	}
-	
 }
