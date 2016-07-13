@@ -60,7 +60,6 @@ public class FileUtils {
 	 */
 	public static boolean writeAppendFile(String path,String writeMsg){
 		
-		
 		File file = new File(path);
 		FileWriter fw = null;
 		FileReader fr = null;
@@ -148,19 +147,4 @@ public class FileUtils {
 		return result;
 	}
 	
-	public static void main(String[] args) {
-		//写文件
-		String path = "E:\\100bei\\orgInfo.txt";
-		String writeMsg = "测试写文件";
-		boolean writeFlag = writeAppendFile(path, writeMsg);
-		if(writeFlag){
-			System.out.println("文件写入成功");
-		}else{
-			System.out.println("文件写入失败");
-		}
-		
-		//读文件
-		String result = readFile(path);
-		System.out.println("读取文件内容："+result);
-	}
 }
