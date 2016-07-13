@@ -26,12 +26,12 @@ public class TestJDBCUtils {
 	
 	@Before
 	public void before(){
-		System.out.println("@Before");
+		System.out.println("@Before:JDBCUtils");
 	}
 	
 	@After
 	public void after(){
-		System.out.println("@After");
+		System.out.println("@After:JDBCUtils");
 	}
 	
 	
