@@ -10,4 +10,4 @@
 ---------------其他demo（src/test/java-com.yjw.utils）---------------
 1、spider 爬虫相关demo
 2、thread 线程相关demo
-
+3、log4j  log4j写日志demo
